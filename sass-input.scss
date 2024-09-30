@@ -1,0 +1,76 @@
+$light-color: #f7fafc;
+$indigo-color: #3c366b;
+$gray-color: #4a5568;
+$red-color: #e74c3c;
+$light-gray: #ddd;
+$black-color: black;
+$font-stack: Helvetica, sans-serif;
+
+body {
+    font: 100% $font-stack;
+    margin: 0;
+}
+
+// Navbar Style
+.navbar {
+    background-color: $light-color;
+    height: 50px;
+    a{
+        color: $gray-color;
+        float:left;
+        display: block;
+        text-align: center;
+        padding: 10px 20px;
+        text-decoration: none !important;
+        img{
+            height: 30px;
+            width: 145px;
+        }
+    }
+    a:hover{
+        background-color: $light-gray;
+        color: $black-color;
+        padding: 10px 20px;
+    }
+    .right{
+        float: right;
+        width: auto !important;
+        display: block;
+        padding: 5px;
+    }
+}
+
+// Header Style
+.header {
+    background-color: $indigo-color;
+    color: $light-color;
+    height: 150px;
+}
+
+// About Style
+.about {
+    background-color: $light-color;
+    color: $indigo-color;
+    height: 100px;
+}
+
+// Product Style
+.product {
+    background-color: $red-color;
+    color: $light-color;
+    height: 100px;
+}
+
+// Contact Style
+.contact {
+    background-color: $light-color;
+    color: $gray-color;
+    height: 100px;
+}
+
+// Footer Style
+.footer {
+    background-color: $gray-color;
+    color: $light-color;
+    height: 75px;
+}
