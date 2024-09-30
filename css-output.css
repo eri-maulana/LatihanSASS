@@ -236,9 +236,37 @@ body {
 }
 
 .contact {
-  background-color: #f7fafc;
+  background-image: url(images/map.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 50px;
+}
+.contact .info {
+  width: 50%;
+  background-color: #ddd;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+@media screen and (max-width: 800px) {
+  .contact .info {
+    width: 75%;
+  }
+}
+.contact .info i {
+  color: #e74c3c;
+  font-size: 30px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.contact .info h1 {
   color: #4a5568;
-  height: 100px;
+  font-size: 30px;
 }
 
 .footer {
