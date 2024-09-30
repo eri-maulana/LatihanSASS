@@ -7,6 +7,23 @@ $black-color: black;
 $gray: #718096;
 $font-stack: Helvetica, sans-serif;
 
+@mixin item($value) {
+    width: $value;
+    float: left;
+    @media screen and (max-width: 768px) {
+        float: none;
+        width: 100%;
+    }
+}
+
+@mixin judul($color, $shadow){
+    color: $color;
+    text-shadow: 1px 1px $shadow;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
 body {
     font: 100% $font-stack;
     margin: 0;
@@ -15,7 +32,7 @@ body {
 // Navbar Style
 .navbar {
     background-color: $light-color;
-    height: 50px;
+    overflow: hidden;
     a{
         color: $gray-color;
         float:left;
@@ -40,6 +57,19 @@ body {
         padding: 5px;
     }
 }
+@media screen and (max-width: 768px) {
+    .navbar{
+        a{
+            float: none !important;
+            width: 100%;
+        }
+        .right{
+            float: none !important;
+            width: 100%;
+        }
+    }
+
+}
 
 // Header Style
 .header {
@@ -49,8 +79,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    border-top: 1px solid  $indigo-color;
-    border-bottom: 1px solid $indigo-color;
 }
 .text-header {
     text-align: center;
@@ -69,13 +97,7 @@ body {
     }
 }
 
-@mixin judul($color, $shadow){
-        color: $color;
-        text-shadow: 1px 1px $shadow;
-        font-size: 35px;
-        font-weight: 700;
-        margin-bottom: 10px;
-}
+
 .judul-header {
     @include judul($indigo-color, $light-color);
 }
@@ -86,7 +108,7 @@ body {
 
 .button-basic {
     border: none !important;
-    padding: 15px 30px !important;
+    padding: 15px 15px !important;
     text-align: center !important;
     font-size: 20px !important;
     cursor: pointer !important;
@@ -106,25 +128,25 @@ body {
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 20px;
+    box-sizing: border-box;
 }
-@mixin item($start, $end) {
-    grid-column-start: $start;
-    grid-column-end: $end;
-}
+
 .item-sepertiga{
-    @include item(1,2);
+    @include item(33%);
 }
 .item-duapertiga{
-    @include item(2,3);
+    @include item(66%);
 }
 
 // About Style
 .about {
     background-image: linear-gradient(to bottom right, $light-gray, $light-color);
-    height: 400px;
+    min-height: 400px;
+    @media screen and (max-width: 768px) {
+        text-align: center;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+    }
     img{
         border-radius: 100%;
         padding: 20px;
@@ -153,6 +175,7 @@ body {
 .product {
     background-color: $indigo-color;
     padding-bottom: 20px !important;
+    margin-top: 0;
 }
 .image-style
 {
@@ -194,6 +217,9 @@ body {
             padding: 20px;
             padding-top: 5px !important;
             text-align: justify;
+            @media screen and (max-width: 768px) {
+                padding: 5px !important;
+            }
         }
         .product-footer
         {
@@ -201,6 +227,10 @@ body {
             padding-bottom: 25px;
             margin-top: 10px;
             text-align: center;
+            @media screen and (max-width: 768px) {
+                padding: 5px !important;
+                padding-bottom: 25px !important;
+            }
         }
         @media screen and (max-width:800px) {
             width: 100%;
