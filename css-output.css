@@ -32,9 +32,58 @@ body {
 }
 
 .header {
-  background-color: #3c366b;
-  color: #f7fafc;
-  height: 150px;
+  background-image: url(images/header.jpg);
+  height: 400px !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-top: 1px solid #3c366b;
+  border-bottom: 1px solid #3c366b;
+}
+
+.text-header {
+  text-align: center;
+  padding: 30px;
+}
+.text-header h1 {
+  color: #3c366b;
+  text-shadow: 1px 1px #f7fafc;
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.text-header hr {
+  margin: auto;
+  width: 300px;
+  border-color: #718096;
+  margin-bottom: 10px;
+}
+.text-header p {
+  color: #4a5568;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.button-basic, .button-secondary, .button-primary {
+  border: none !important;
+  padding: 15px 30px !important;
+  text-align: center !important;
+  font-size: 20px !important;
+  cursor: pointer !important;
+  color: white !important;
+  font-family: "Poiret one", cursive !important;
+  text-decoration: none !important;
+  border-radius: 8px !important;
+  margin-top: 30px !important;
+}
+
+.button-primary {
+  background-color: #e74c3c;
+}
+
+.button-secondary {
+  background-color: #718096;
 }
 
 .about {
